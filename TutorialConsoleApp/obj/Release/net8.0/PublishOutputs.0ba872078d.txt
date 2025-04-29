@@ -1,5 +1,0 @@
-C:\Users\hlopez\RiderProjects\TutorialConsoleApp\TutorialConsoleApp\bin\Release\net8.0\publish\TutorialConsoleApp.exe
-C:\Users\hlopez\RiderProjects\TutorialConsoleApp\TutorialConsoleApp\bin\Release\net8.0\publish\TutorialConsoleApp.dll
-C:\Users\hlopez\RiderProjects\TutorialConsoleApp\TutorialConsoleApp\bin\Release\net8.0\publish\TutorialConsoleApp.deps.json
-C:\Users\hlopez\RiderProjects\TutorialConsoleApp\TutorialConsoleApp\bin\Release\net8.0\publish\TutorialConsoleApp.runtimeconfig.json
-C:\Users\hlopez\RiderProjects\TutorialConsoleApp\TutorialConsoleApp\bin\Release\net8.0\publish\TutorialConsoleApp.pdb
