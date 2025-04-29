@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Program.cs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cacaca;}
+.s1 { color: #f3505c;}
+.s2 { color: #cacaca;}
+.s3 { color: #eedb85;}
+.s4 { color: #777777;}
+.s5 { color: #368aec;}
+</style>
+</head>
+<body bgcolor="#212121">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Program.cs</font>
+</center></td></tr></table>
+<pre>
+
+<span class="s1">namespace </span><span class="s0">TutorialConsoleApp</span>
+<span class="s0">{</span>
+    <span class="s1">class </span><span class="s0">TutorialConsoleApp</span>
+    <span class="s0">{</span>
+        <span class="s1">private static void </span><span class="s0">Main()</span>
+        <span class="s0">{</span>
+            <span class="s0">PrintToConsole()</span><span class="s2">;</span>
+            <span class="s0">VariablesAndDataTypes()</span><span class="s2">;</span>
+            <span class="s0">MathOperations()</span><span class="s2">;</span>
+            <span class="s0">TryExceptOperations()</span><span class="s2">;</span>
+            <span class="s0">NumberConversion()</span><span class="s2">;</span>
+            <span class="s0">ComparisonOperators()</span><span class="s2">;</span>
+            <span class="s0">LogicalOperators()</span><span class="s2">;</span>
+            <span class="s0">ConditionalStatements()</span><span class="s2">;</span>
+            <span class="s0">SwitchStatements()</span><span class="s2">;</span>
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">PrintToConsole()</span>
+        <span class="s0">{</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;Hello World!&quot;</span><span class="s0">)</span><span class="s2">;</span>
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">VariablesAndDataTypes()</span>
+        <span class="s0">{   Console.WriteLine(</span><span class="s3">&quot;Variables and data types in C#&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s4">// Number data types in C#</span>
+            <span class="s1">const int </span><span class="s0">age = </span><span class="s5">16</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;this is a integer in C#: &quot; </span><span class="s0">+ age)</span><span class="s2">;</span>
+            <span class="s1">const float </span><span class="s0">temperature = </span><span class="s5">20.4f</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a float in C#: &quot; </span><span class="s0">+ temperature)</span><span class="s2">;</span>
+            <span class="s1">const double </span><span class="s0">number = </span><span class="s5">20.4</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a double in C#: &quot; </span><span class="s0">+ number)</span><span class="s2">;</span>
+            <span class="s1">const decimal </span><span class="s0">stockPrice = </span><span class="s5">10.5m</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a decimal in C#: &quot;</span><span class="s0">+ stockPrice)</span><span class="s2">;</span>
+            
+            <span class="s4">// Other datatypes in C#</span>
+            <span class="s1">const char </span><span class="s0">grade = </span><span class="s3">'A'</span><span class="s2">; </span><span class="s4">// To define char we use single quotes.</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a char in C#: &quot; </span><span class="s0">+ grade)</span><span class="s2">;</span>
+            <span class="s1">const string </span><span class="s0">name = </span><span class="s3">&quot;John&quot;</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a string in C# &quot; </span><span class="s0">+ name)</span><span class="s2">;</span>
+            <span class="s1">const bool </span><span class="s0">boolean = </span><span class="s1">true</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a boolean in C#: &quot; </span><span class="s0">+ boolean)</span><span class="s2">;</span>
+            <span class="s1">const string </span><span class="s0">fstringstyle = </span><span class="s3">&quot;Héctor&quot;</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;This is a string in C#: </span><span class="s0">{fstringstyle}</span><span class="s3">. This is done with $in from of the string variable.&quot;</span><span class="s0">)</span><span class="s2">;</span>
+
+            <span class="s1">int </span><span class="s0">quantity</span><span class="s2">;  </span><span class="s4">//This way we can define variables that are empty and ready to use later.</span>
+            <span class="s1">string </span><span class="s0">product</span><span class="s2">; </span><span class="s4">// constants needs initializers.</span>
+            
+            <span class="s4">// here we can define for later.</span>
+            <span class="s0">quantity = </span><span class="s5">10</span><span class="s2">;</span>
+            <span class="s0">product = </span><span class="s3">&quot;boxers&quot;</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;This is a variable with a value assigned later: </span><span class="s0">{quantity}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;This is a variable with a value assigned later: </span><span class="s0">{product}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            
+            <span class="s4">// Lets talk about constants in .NET</span>
+
+            <span class="s1">const decimal </span><span class="s0">pyDecimal = </span><span class="s5">3.14m</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;This number is a constant, it cannot be changed: </span><span class="s0">{pyDecimal}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">MathOperations()</span>
+        <span class="s0">{    Console.WriteLine(</span><span class="s3">&quot;This is a math operations in C#&quot;</span><span class="s0">)</span><span class="s2">;</span>
+             <span class="s1">int </span><span class="s0">number1 = </span><span class="s5">10</span><span class="s2">;</span>
+             <span class="s1">int </span><span class="s0">number2 = </span><span class="s5">20</span><span class="s2">;</span>
+             <span class="s1">int </span><span class="s0">sum = number1 + number2</span><span class="s2">; </span>
+             <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The sum of numbers is </span><span class="s0">{sum}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+             <span class="s1">int </span><span class="s0">difference = number1 - number2</span><span class="s2">;</span>
+             <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The difference of numbers is </span><span class="s0">{difference}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+             <span class="s1">int </span><span class="s0">multiply = number1 * number2</span><span class="s2">;</span>
+             <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The multiply of numbers is </span><span class="s0">{multiply}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+             <span class="s1">int </span><span class="s0">divide = number2 / number1</span><span class="s2">;</span>
+             <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The divide of numbers is </span><span class="s0">{divide}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+             <span class="s1">int </span><span class="s0">modulo = number1 % number2</span><span class="s2">;</span>
+             <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The modulo of numbers is </span><span class="s0">{modulo}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+             
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">TryExceptOperations()</span>
+        <span class="s0">{</span>
+            <span class="s1">int </span><span class="s0">zero = </span><span class="s5">0</span><span class="s2">;</span>
+            <span class="s1">int </span><span class="s0">one = </span><span class="s5">1</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a try except operations in C#&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">try</span>
+            <span class="s0">{</span>
+                <span class="s1">int </span><span class="s0">result = one / zero</span><span class="s2">;</span>
+            <span class="s0">}</span>
+            <span class="s1">catch </span><span class="s0">(DivideByZeroException ex)</span>
+            <span class="s0">{</span>
+                <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;Error catching: </span><span class="s0">{ex.Message}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s0">}</span>
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">NumberConversion()</span>
+        <span class="s0">{</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a number conversion in C#&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">int </span><span class="s0">num3 =</span><span class="s5">105</span><span class="s2">;</span>
+            <span class="s1">double </span><span class="s0">num3asDouble = (</span><span class="s1">double</span><span class="s0">)num3</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The number </span><span class="s0">{num3} </span><span class="s3">is now </span><span class="s0">{num3asDouble}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">ComparisonOperators()</span>
+        <span class="s0">{</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a comparison operators in C#&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">int </span><span class="s0">equal_number1 = </span><span class="s5">1</span><span class="s2">;</span>
+            <span class="s1">int </span><span class="s0">equal_number2 = </span><span class="s5">2</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">isEqual = (equal_number1 == equal_number2)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The number </span><span class="s0">{equal_number1} </span><span class="s3">is equal to </span><span class="s0">{equal_number2}</span><span class="s3">? the answer is </span><span class="s0">{isEqual}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">isNotEqual = (equal_number1 != equal_number2)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The number </span><span class="s0">{equal_number1} </span><span class="s3">is not equal to </span><span class="s0">{equal_number2}</span><span class="s3">? the answer is </span><span class="s0">{isNotEqual}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">isLessThan = (equal_number1 &lt; equal_number2)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The number </span><span class="s0">{equal_number1} </span><span class="s3">is less than </span><span class="s0">{equal_number2}</span><span class="s3">? the answer is </span><span class="s0">{isLessThan}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">isGreaterThan = (equal_number1 &gt; equal_number2)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The number </span><span class="s0">{equal_number1} </span><span class="s3">is greater than </span><span class="s0">{equal_number2}</span><span class="s3">? the answer is </span><span class="s0">{isGreaterThan}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">isLessThanOrEqualTo = (equal_number1 &lt;= equal_number2)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;$The number </span><span class="s0">{equal_number1} </span><span class="s3">is less than or equal to </span><span class="s0">{equal_number2}</span><span class="s3">? the answer is </span><span class="s0">{isLessThanOrEqualTo} </span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">isGreaterThanOrEqualTo = (equal_number1 &gt;= equal_number2)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The number </span><span class="s0">{equal_number1} </span><span class="s3">is greater or equal to </span><span class="s0">{equal_number2}</span><span class="s3">? the answer is </span><span class="s0">{isGreaterThanOrEqualTo}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">LogicalOperators()</span>
+        <span class="s0">{</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a logical operators in C#&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            
+            
+            <span class="s1">bool </span><span class="s0">x = </span><span class="s1">true</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">y = </span><span class="s1">false</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">endresult = (x &amp;&amp; y)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The operator &amp;&amp; which is and in python: </span><span class="s0">{endresult}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">orResult = (x || y)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The operator || which is or in python: </span><span class="s0">{orResult}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">NotResult1 = (x &amp;&amp; !y)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The operator &amp;&amp; !y which is not: </span><span class="s0">{NotResult1}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">bool </span><span class="s0">NotResult2 = !x</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;To negate the x which iss !x: </span><span class="s0">{NotResult2}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">ConditionalStatements()</span>
+        <span class="s0">{</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;These are conditional statements in C#&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;Let`s start with the if/else statements&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">int </span><span class="s0">age = </span><span class="s5">25</span><span class="s2">;</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">$&quot;The age is </span><span class="s0">{age}</span><span class="s3">&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s1">if </span><span class="s0">(age &lt; </span><span class="s5">18</span><span class="s0">)</span>
+            <span class="s0">{</span>
+                <span class="s0">Console.WriteLine(</span><span class="s3">&quot;The condition is below 18&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s0">}</span>
+            <span class="s1">else if </span><span class="s0">(age &gt;= </span><span class="s5">18 </span><span class="s0">&amp;&amp; age &lt;= </span><span class="s5">56</span><span class="s0">)</span>
+            <span class="s0">{</span>
+                <span class="s0">Console.WriteLine(</span><span class="s3">&quot;The condition is above 56&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s0">}</span>
+            <span class="s1">else</span>
+            <span class="s0">{</span>
+                <span class="s0">Console.WriteLine(</span><span class="s3">&quot;The condition is above 18&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            <span class="s0">}</span>
+
+        <span class="s0">}</span>
+
+        <span class="s1">static void </span><span class="s0">SwitchStatements()</span>
+        <span class="s0">{</span>
+            <span class="s0">Console.WriteLine(</span><span class="s3">&quot;This is a switch statements in C#&quot;</span><span class="s0">)</span><span class="s2">;</span>
+            
+            
+        <span class="s0">}</span>
+
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+</pre>
+</body>
+</html>
