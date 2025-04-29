@@ -1,5 +1,7 @@
 ﻿
 
+
+
 namespace TutorialConsoleApp
 {
     class TutorialConsoleApp
@@ -18,6 +20,9 @@ namespace TutorialConsoleApp
             ForLoopStatements();
             WhileLoopStatements();
             DoWhileStatements();
+            ForeachLoopStatement();
+            ArraysDataTypes();
+            Collections();
         }
 
         static void PrintToConsole()
@@ -228,6 +233,72 @@ namespace TutorialConsoleApp
             Console.WriteLine("This is a while statements in C#");
             int count = 0;
         }
+
+        static void ForeachLoopStatement()
+        {
+            Console.WriteLine("This is a foreach statements in C#");
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 10 };
+
+            foreach (int number in numbers)
+            {
+                Console.WriteLine($" Foreach number is {number}");
+            }
+        }
+
+        static void ArraysDataTypes()
+        {
+            Console.WriteLine("Arrays Data Types");
+            string[] names = new string[3];
+            names[0] = "John";
+            names[1] = "Doe";
+            names[2] = "Jane";
+            Console.WriteLine($"THe lenght of the list is {names.Length}");
+            Console.WriteLine($"The array can be indexed, for example {names[0]} and {names[1]} are index 0 and 1.");
+        }
+
+        static void Collections()
+        {
+            Console.WriteLine("Collections: Complex Data Types in C#");
+            List<string> names = new List<string>();
+            names.Add("John");
+            names.Add("Doe");
+            names.Add("Jane");
+            Console.WriteLine($"THe lenght of the list is {names.Count}");
+            Console.WriteLine($"The indexing works as well, as inddex 1 is {names[1]}");
+            Console.WriteLine($"Because we added 3 items to the list, this is its form\n {names}");
+            names.Add("John");
+            Console.WriteLine($"List can contain duplicates, like here:\n{names}");
+            Console.WriteLine("abd this is an iteration of the list using foreach:");
+
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
+            Console.WriteLine("Now letś go with the hashsets.");
+            HashSet<float> hashset = new HashSet<float> {1,1,1,1,};
+            hashset.Add(1.2f);
+            hashset.Add(1.3f);
+            hashset.Add(1.4f);
+            hashset.Add(1.5f);
+            
+            foreach (float f in hashset)
+            {
+                Console.WriteLine(f);
+            }
+            Console.WriteLine("Now let's go with the dictionaries.");
+            Dictionary<string, int> ages = new Dictionary<string, int>();
+            string[] agesArray = {"John", "Doe", "Jane"};
+            int[] agesArray2 = { 1, 2, 3,};
+            foreach ((string k, int v) in Enumerable.Zip(agesArray, agesArray2))
+            {
+                ages[k] = v;
+                Console.WriteLine($"The keys and values are: {k} : {ages[k]}");
+                
+                
+            }
+
+        }
+            
     }
 }
 
